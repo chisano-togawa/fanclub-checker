@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典チェッカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="index.html" class="back-link">&lt; ログインに戻る</a>
+            <h1>特典チェッカー</h1>
+            <div id="staffInfo"></div>
+        </header>
+
+        <main>
+            <div id="qr-section">
+                <div id="qr-reader" style="display:none;"></div>
+                <button id="startScanBtn" class="btn btn-secondary">
+                    <span class="icon">📷</span> QRスキャン開始
+                </button>
+            </div>
+
+            <p class="or-text"><span>または</span></p>
+
+            <div class="input-group">
+                <input type="text" id="memberIdInput" placeholder="会員番号を手入力...">
+                <button id="checkButton" class="btn">チェック</button>
+            </div>
+
+            <div id="result" class="result-box">
+                <p>会員番号を読み込んでください</p>
+            </div>
+        </main>
+
+        <hr>
+
+        <section class="summary-section">
+            <h2>現在の配布状況</h2>
+            <div class="summary">
+                <div>
+                    <h3>本日の配布数</h3>
+                    <p id="dailyCount">0</p>
+                </div>
+                <div>
+                    <h3>累計配布数</h3>
+                    <p id="totalCount">0</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="main-footer">
+            <a id="toListLink" href="list.html" class="footer-link">配布履歴一覧を確認する</a>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <script src="checker.js"></script>
+</body>
+</html>
