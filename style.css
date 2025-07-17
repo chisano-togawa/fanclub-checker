@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --test-color: #ffc107;
+    --live-color: #fd7e14;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #e9ecef;
+    color: var(--dark-color);
+    margin: 0;
+    padding: 1rem;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Headers --- */
+.main-header { text-align: center; margin-bottom: 2rem; }
+.main-header h1 { font-size: 1.8rem; margin: 0; }
+.main-header .subtitle { font-size: 1rem; color: var(--secondary-color); margin-top: 0.25rem;}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+.page-header h1 { font-size: 1.5rem; margin: 0; }
+.back-link {
+    position: absolute;
+    left: 0;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+.btn:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.btn-test { background-color: var(--test-color); color: var(--dark-color); }
+.btn-live { background-color: var(--danger-color); }
+.btn-secondary { background-color: var(--secondary-color); }
+.btn .btn-main-text { font-size: 1.2rem; display: block; }
+.btn .btn-sub-text { font-size: 0.8rem; opacity: 0.9; display: block; }
+
+/* --- Forms & QR --- */
+#qr-section { margin-bottom: 1rem; }
+#qr-reader { width: 100%; border-radius: 6px; overflow: hidden; margin-bottom: 1rem; }
+.or-text { text-align: center; font-style: italic; color: #888; margin: 1.5rem 0; }
+.input-group { display: flex; gap: 0.5rem; }
+#memberIdInput {
+    flex-grow: 1;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
+.input-group .btn { width: auto; margin-bottom: 0; background-color: var(--primary-color); }
+
+/* --- Result & Summary --- */
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    background-color: var(--light-color);
+}
+.summary-section h2 { text-align: center; font-size: 1.2rem; margin-top: 2rem; }
+.summary {
+    display: flex;
+    justify-content: space-around;
+    background: var(--light-color);
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+.summary h3 { font-size: 0.9rem; margin: 0 0 0.5rem 0; color: var(--secondary-color); }
+.summary p { font-size: 2rem; font-weight: 700; color: var(--primary-color); margin: 0; }
+
+/* --- Table --- */
+.table-container { overflow-x: auto; }
+#historyTable { width: 100%; border-collapse: collapse; }
+#historyTable th, #historyTable td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.9rem;
+}
+#historyTable th { font-weight: 700; background-color: var(--light-color); }
+
+/* --- Footer --- */
+.main-footer { text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #dee2e6; }
+.footer-link { text-decoration: none; color: var(--primary-color); font-weight: 500; }
