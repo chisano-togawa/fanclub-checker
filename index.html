@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特典配布管理システム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container welcome-container">
+        <header class="main-header">
+            <h1>特典配布管理システム</h1>
+            <p class="subtitle">STAFF LOGIN</p>
+        </header>
+        <main>
+            <form id="loginForm">
+                <div class="input-group vertical">
+                    <label for="staffName">スタッフ名を入力してください</label>
+                    <input type="text" id="staffName" placeholder="例：山田 太郎" required>
+                </div>
+                <button type="submit" class="btn">配布を開始する</button>
+            </form>
+        </main>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const staffName = document.getElementById('staffName').value.trim();
+            if (!staffName) {
+                alert('スタッフ名を入力してください。');
+                return;
+            }
+            window.location.href = `checker.html?staff=${encodeURIComponent(staffName)}`;
+        });
+    </script>
+</body>
+</html>
