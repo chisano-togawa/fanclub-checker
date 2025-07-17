@@ -1,0 +1,94 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+h1, h2 {
+    color: #5a5a5a;
+}
+.mode-selector {
+    margin: 1em 0;
+    padding: 1em;
+    background: #fffbe6;
+    border: 1px solid #ffe58f;
+    border-radius: 4px;
+}
+.mode-selector label {
+    margin: 0 1em;
+    font-weight: bold;
+}
+input[type="radio"][value="live"]:checked + label {
+    color: #d93025;
+}
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 2em 0;
+}
+#qr-reader {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 1em auto;
+}
+.or-text {
+    font-style: italic;
+    color: #777;
+}
+#memberIdInput {
+    width: calc(100% - 22px);
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+}
+button:hover {
+    opacity: 0.9;
+}
+#result {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.summary {
+    display: flex;
+    justify-content: space-around;
+    background: #e9f5fe;
+    padding: 1em;
+    border-radius: 4px;
+}
+.summary div {
+    flex: 1;
+}
+.summary p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0d6efd;
+    margin: 0;
+}

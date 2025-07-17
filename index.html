@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ファンクラブ特典 配布管理システム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ファンクラブ特典 配布管理システム</h1>
+
+        <div class="mode-selector">
+            <label><input type="radio" name="mode" value="test" checked> テストモード</label>
+            <label><input type="radio" name="mode" value="live"> 🚨 本番モード</label>
+        </div>
+
+        <hr>
+
+        <h2>会員チェック</h2>
+        <div id="qr-reader"></div>
+        <p class="or-text">または</p>
+        <input type="text" id="memberIdInput" placeholder="会員番号を入力...">
+        <button id="checkButton">チェック</button>
+
+        <div id="result">
+            <p>ここに結果が表示されます</p>
+        </div>
+
+        <hr>
+
+        <h2>配布状況サマリー</h2>
+        <div class="summary">
+            <div>
+                <h3>本日の配布数</h3>
+                <p id="dailyCount">0</p>
+            </div>
+            <div>
+                <h3>累計配布数</h3>
+                <p id="totalCount">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
